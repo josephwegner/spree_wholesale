@@ -74,9 +74,9 @@ class Spree::Admin::WholesalersController < Spree::Admin::ResourceController
   def collection
     return @collection if @collection.present?
 
-    params[:search] ||= {}
-    params[:search][:meta_sort] ||= "company.asc"
-    @search = Spree::Wholesaler.metasearch(params[:search])
-    @collection = @search.page(params[:page]).per(Spree::Config[:admin_products_per_page])
+    params[:q] ||= {}
+    params[:q][:sort] ||= "company.asc"
+    @search = Spree::Wholesaler.search(params[:q])
+    @collection = @search.result(:distinct => true).page(params[:page]).per(Spree::Config[:admin_products_per_page])
   end
 end
