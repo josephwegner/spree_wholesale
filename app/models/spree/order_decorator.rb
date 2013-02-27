@@ -34,13 +34,13 @@ Spree::Order.class_eval do
     save
   end
 
-  def add_variant(variant, quantity = 1)
+  def add_variant(variant, quantity = 1, instructions = '')
     current_item = contains?(variant)
     if current_item
       current_item.quantity += quantity
       current_item.save
     else
-      current_item = Spree::LineItem.new(:quantity => quantity)
+      current_item = Spree::LineItem.new(:quantity => quantity, :instructions => instructions)
       current_item.variant = variant
       current_item.price   = is_wholesale? ? variant.wholesale_price : variant.price
       self.line_items << current_item
