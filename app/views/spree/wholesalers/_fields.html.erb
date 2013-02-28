@@ -1,4 +1,4 @@
-<fieldset class="leftie">
+<fieldset>
 
   <fieldset class="user-details">
     <h2>User</h2>
@@ -28,11 +28,11 @@
     </p>
     <p>
       <%= form.label :fax %><br/>
-      <%= form.text_field :fax %>
+      <%= form.text_field :fax, :class => 'input' %>
     </p>
     <p>
       <%= form.label :resale_number %><br/>
-      <%= form.text_field :resale_number %>
+      <%= form.text_field :resale_number, :class => 'input' %>
     </p>
     <p>
       <%= form.label :taxid %><span class="req">*</span><br/>
@@ -40,22 +40,22 @@
     </p>
     <p>
       <%= form.label :web_address %><br/>
-      <%= form.text_field :web_address %>
+      <%= form.text_field :web_address, :class => 'input' %>
     </p>
     <p>
-      <%= form.label :terms %><br/>
-      <%= form.select :terms, Spree::Wholesaler.term_options, :class => 'required input' %><span class="req">*</span>
+      <%= form.label :terms %><span class="req">*</span><br/>
+      <%= form.select :terms, Spree::Wholesaler.term_options, :class => 'required input' %>
     </p>
     <p>
       <%= form.label :notes %><br/>
-      <%= form.text_area :notes %>
+      <%= form.text_area :notes, :class => 'input' %>
     </p>
   </fieldset>
 
 </fieldset>
 
 
-<fieldset class="rightie">
+<fieldset>
 
   <%= render "spree/shared/address_form", :form => form %>
 
