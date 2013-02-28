@@ -1,4 +1,7 @@
-<fieldset class="leftie">
+<fieldset>
+<div class="grid_5 alpha">
+<div class="login-top"></div>
+<div class="form">
 
   <fieldset class="user-details">
     <legend>User</legend>
@@ -6,6 +9,14 @@
       <%= render 'spree/shared/user_form', :f => uf %>
     <% end %>
   </fieldset>
+</div>
+<div class="login-bottom">
+</div>
+
+
+<div class="grid_5 alpha">
+<div class="login-top"></div>
+<div class="form">
 
   <fieldset class="wholesaler-details">
     <legend>Company Information</legend>
@@ -52,6 +63,9 @@
     </p>
   </fieldset>
 </fieldset>
+</div>
+<div class="login-bottom">
+</div>
 
 <fieldset class="rightie">
   <%= render "spree/shared/address_form", :form => form %>
