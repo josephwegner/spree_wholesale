@@ -1,5 +1,7 @@
 <h1><%= t('wholesale_signup') %></h1>
-
+<div class="grid_5 alpha">
+<div class="login-top"></div>
+<div class="form">
 <%= form_for @wholesaler do |form| %>
   <%= render "spree/shared/error_messages", :target => @wholesaler %>
   <%= render 'fields', :form => form %>
