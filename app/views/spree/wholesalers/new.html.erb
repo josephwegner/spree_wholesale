@@ -1,4 +1,8 @@
 <h1><%= t('wholesale_signup') %></h1>
+<div class="grid_3 alpha">&nbsp;</div>
+<div class="grid_6">
+<div class="form-center-top"></div>
+<div id="new-customer" class="form-center">
 <%= form_for @wholesaler do |form| %>
   <%= render "spree/shared/error_messages", :target => @wholesaler %>
   <%= render 'fields', :form => form %>
@@ -7,3 +11,6 @@
     <%= form.submit t("wholesale_apply"), :class => 'apply-button' %>
   </p>
 <% end %>
+</div>
+<div class="form-center-bottom"></div>
+</div>
