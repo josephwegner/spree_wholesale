@@ -1,7 +1,4 @@
-<fieldset>
-<div class="grid_5 alpha">
-<div class="login-top"></div>
-<div class="login form">
+<fieldset class="leftie">
 
   <fieldset class="user-details">
     <h2>User</h2>
@@ -10,32 +7,25 @@
     <% end %>
   </fieldset>
 </div>
-<div class="login-bottom"></div>
-</div>
-
-
-<div class="grid_5 alpha">
-<div class="login-top"></div>
-<div class="login form">
 
   <fieldset class="wholesaler-details">
     <h2>Company Information</h2>
 
     <p>
-      <%= form.label :company %><br/>
-      <%= form.text_field :company, :class => 'required input' %><span class="req">*</span>
+      <%= form.label :company %><span class="req">*</span><br/>
+      <%= form.text_field :company, :class => 'required input' %>
     </p>
     <p>
-      <%= form.label :buyer_contact %><br/>
-      <%= form.text_field :buyer_contact, :class => 'required input' %><span class="req">*</span>
+      <%= form.label :buyer_contact %><span class="req">*</span><br/>
+      <%= form.text_field :buyer_contact, :class => 'required input' %>
     </p>
     <p>
-      <%= form.label :manager_contact %><br/>
-      <%= form.text_field :manager_contact, :class => 'required input' %><span class="req">*</span>
+      <%= form.label :manager_contact %><span class="req">*</span><br/>
+      <%= form.text_field :manager_contact, :class => 'required input' %>
     </p>
     <p>
-      <%= form.label :phone %><br/>
-      <%= form.text_field :phone, :class => 'required input' %><span class="req">*</span>
+      <%= form.label :phone %><span class="req">*</span><br/>
+      <%= form.text_field :phone, :class => 'required input' %>
     </p>
     <p>
       <%= form.label :fax %><br/>
@@ -46,8 +36,8 @@
       <%= form.text_field :resale_number %>
     </p>
     <p>
-      <%= form.label :taxid %><br/>
-      <%= form.text_field :taxid, :class => 'required input' %><span class="req">*</span>
+      <%= form.label :taxid %><span class="req">*</span><br/>
+      <%= form.text_field :taxid, :class => 'required input' %>
     </p>
     <p>
       <%= form.label :web_address %><br/>
@@ -63,19 +53,15 @@
     </p>
   </fieldset>
   </div>
-<div class="login-bottom"></div>
-</div>
+
 </fieldset>
 
 
 <fieldset class="rightie">
-<div class="grid_5 alpha">
-<div class="login-top"></div>
-<div class="login form">
+
   <%= render "spree/shared/address_form", :form => form %>
   </div>
-<div class="login-bottom"></div>
-</div>
+
 </fieldset>
 
 <% content_for :head do %>
