@@ -1,10 +1,10 @@
+<%= render "spree/shared/error_messages", :target => @wholesaler %>
 <div class="grid_3 alpha">&nbsp;</div>
 <div class="grid_6">
 <h1><%= t('wholesale_signup') %></h1>
 <div class="form-center-top"></div>
 <div id="new-customer" class="form-center form">
 <%= form_for @wholesaler do |form| %>
-  <%= render "spree/shared/error_messages", :target => @wholesaler %>
   <%= render 'fields', :form => form %>
 
   <p class="action">
